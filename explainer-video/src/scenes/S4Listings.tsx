@@ -406,7 +406,7 @@ const WebsiteBeat: React.FC = () => {
 			<Appear delay={8} y={60} style={{position: 'absolute', left: (square ? 1080 : 1920) / 2 - W / 2, top: square ? 220 : 240}}>
 				<Browser url="bestbalirealty.com/villas/sanur-3-bed-pool-villa" width={W} height={H}>
 					<div style={{padding: '18px 34px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${C.line}`}}>
-						<div style={{fontSize: 18, fontWeight: 700, letterSpacing: '0.3em'}}>BEST BALI REAL ESTATE</div>
+						<div style={{fontSize: 18, fontWeight: 700, letterSpacing: '0.3em'}}>BEST BALI REALTY</div>
 						<div style={{display: 'flex', gap: 28, fontSize: 18, color: C.inkSoft, fontWeight: 500}}>
 							<span>Villas</span>
 							<span>Sell with us</span>

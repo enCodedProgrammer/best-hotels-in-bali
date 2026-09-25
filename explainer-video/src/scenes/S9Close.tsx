@@ -97,7 +97,7 @@ export const S9Close: React.FC<{duration: number}> = ({duration}) => {
 					opacity: sub,
 				}}
 			>
-				FOR BEST BALI REAL ESTATE
+				FOR BEST BALI REALTY
 			</div>
 			<Headline
 				text="*Let's get started.*"

@@ -1,4 +1,4 @@
-# Voiceover script: Best Bali Real Estate explainer
+# Voiceover script: Best Bali Realty explainer
 
 **Length:** 1:48 · **Voice:** warm, mature, unhurried. Lawrence is the only listener, so speak to him directly.
 
@@ -19,7 +19,7 @@
 Each `<break>` fills the rest of that scene's time slot, so every line starts on its scene's timecode. ElevenLabs caps each break at 3 seconds.
 
 ```
-Lawrence, what if Best Bali Real Estate could run itself... while you stay in charge? <break time="0.6s" />
+Lawrence, what if Best Bali Realty could run itself... while you stay in charge? <break time="0.6s" />
 Right now, everything is done by hand. Finding listings. Uploading photos. Writing posts. And ten to fifteen emails for every buyer. <break time="0.8s" />
 So we've built you a team of five digital assistants. Each one does one job, and they never stop working. <break time="0.7s" />
 Every day, Scout finds new villas in your areas. <break time="1.4s" />
@@ -32,7 +32,7 @@ Concierge answers every email and website chat, day or night. It checks budget a
 When a serious buyer comes in, you get a WhatsApp message with their name, what they want, and their budget. <break time="1.4s" />
 And one simple dashboard shows you what's working, what to change, and your hottest leads. <break time="2.6s" />
 Your part? Approve listings, and review posts. That's it. We handle everything else. <break time="1.8s" />
-Pixel Island, for Best Bali Real Estate. Let's get started.
+Pixel Island, for Best Bali Realty. Let's get started.
 ```
 
 ## Target timecodes (where each line must start)
@@ -52,7 +52,7 @@ Pixel Island, for Best Bali Real Estate. Let's get started.
 | 1:14 | WhatsApp | When a serious buyer comes in… |
 | 1:24 | Dashboard | And one simple dashboard… |
 | 1:33 | Your part | Your part? Approve listings… |
-| 1:41 | Close | Pixel Island, for Best Bali Real Estate… |
+| 1:41 | Close | Pixel Island, for Best Bali Realty… |
 
 The break lengths assume about 150 words per minute. A voice that reads faster or slower drifts a little over the video. To get an exact match, use the finished MP3: the silence between lines makes it easy to cut the take into 14 clips and place each one on its start time above.
 
