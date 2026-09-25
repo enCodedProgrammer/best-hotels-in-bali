@@ -1,0 +1,25 @@
+{
+  "name": "bbr-explainer-video",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:wide": "remotion render Explainer-16x9 out/best-bali-explainer-16x9.mp4",
+    "render:square": "remotion render Explainer-1x1 out/best-bali-explainer-1x1.mp4"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.529",
+    "@remotion/cli": "^4.0.529",
+    "@remotion/fonts": "^4.0.529",
+    "@remotion/renderer": "^4.0.529",
+    "@remotion/transitions": "^4.0.529",
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
