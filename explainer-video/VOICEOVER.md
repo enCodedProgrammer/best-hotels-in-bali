@@ -1,64 +1,62 @@
 # Voiceover script: Best Bali Real Estate explainer
 
-**Length:** 1:48 · **About 230 words** · **Pace:** calm and unhurried, roughly 140 words per minute
-**Voice:** warm, confident, conversational. Think a trusted advisor talking across the table, not a salesperson. Lawrence is the only listener, so speak to him directly.
+**Length:** 1:48 · **Voice:** warm, mature, unhurried. Lawrence is the only listener, so speak to him directly.
 
-Every line is timed to the scene on screen. Each timecode is when the line should **start**. A line can finish a little early. It should never run into the next line's start time.
+## ElevenLabs settings
 
----
+| Setting | Value |
+|---|---|
+| Model | **Eleven Multilingual v2** (supports `<break>` tags; v3 does not) |
+| Voice | **George**: warm, mature British storyteller. Alternative: **Brian**, a deep, calm American voice |
+| Speed | 0.95 |
+| Stability | 55% |
+| Similarity | 75% |
+| Style exaggeration | 0% |
+| Speaker boost | On |
 
-### 0:00 · Hook
-> Lawrence, what if Best Bali Real Estate could run itself… while you stay in charge?
+## Paste this into ElevenLabs as one generation
 
-### 0:07 · Today
-> Right now, everything is done by hand. Finding listings. Uploading photos. Writing posts. And ten to fifteen emails… for every single buyer.
+Each `<break>` fills the rest of that scene's time slot, so every line starts on its scene's timecode. ElevenLabs caps each break at 3 seconds.
 
-*(Short pause after each item. The cards appear one by one.)*
+```
+Lawrence, what if Best Bali Real Estate could run itself... while you stay in charge? <break time="0.6s" />
+Right now, everything is done by hand. Finding listings. Uploading photos. Writing posts. And ten to fifteen emails for every buyer. <break time="0.8s" />
+So we've built you a team of five digital assistants. Each one does one job, and they never stop working. <break time="0.7s" />
+Every day, Scout finds new villas in your areas. <break time="1.4s" />
+Pin finds the real address, so you can go straight to the owner. <break time="1.5s" />
+It lands on your dashboard, and you click Approve. <break time="2.2s" />
+Then Quill puts it live on your website. No typing. No uploading. <break time="0.6s" />
+Echo runs your social media. It writes in your brand's voice, and plans your whole week. <break time="1.1s" />
+You take a quick look... and it posts for you. <break time="2.6s" />
+Concierge answers every email and website chat, day or night. It checks budget and timing, and filters out the time-wasters. <break time="0.9s" />
+When a serious buyer comes in, you get a WhatsApp message with their name, what they want, and their budget. <break time="1.4s" />
+And one simple dashboard shows you what's working, what to change, and your hottest leads. <break time="2.6s" />
+Your part? Approve listings, and review posts. That's it. We handle everything else. <break time="1.8s" />
+Pixel Island, for Best Bali Real Estate. Let's get started.
+```
 
-### 0:17 · Meet your team
-> So we've built you a team of five digital assistants. Each one does one job, and they never stop working.
+## Target timecodes (where each line must start)
 
-### 0:26 · Scout finds listings
-> Every day, Scout finds new villas in your areas.
+| Start | Scene | Line |
+|---|---|---|
+| 0:00 | Hook | Lawrence, what if… |
+| 0:07 | Today | Right now, everything is done by hand… |
+| 0:17 | Meet your team | So we've built you a team… |
+| 0:26 | Scout | Every day, Scout finds… |
+| 0:31 | Pin | Pin finds the real address… |
+| 0:38 | Dashboard approve | It lands on your dashboard… |
+| 0:44 | Quill | Then Quill puts it live… |
+| 0:50 | Echo | Echo runs your social media… |
+| 0:58 | Review | You take a quick look… |
+| 1:05 | Concierge | Concierge answers every email… |
+| 1:14 | WhatsApp | When a serious buyer comes in… |
+| 1:24 | Dashboard | And one simple dashboard… |
+| 1:33 | Your part | Your part? Approve listings… |
+| 1:41 | Close | Pixel Island, for Best Bali Real Estate… |
 
-### 0:31 · Pin finds the address
-> Pin finds the real address. So if another agent won't let you list it, you can go straight to the owner.
+The break lengths assume about 150 words per minute. A voice that reads faster or slower drifts a little over the video. To get an exact match, use the finished MP3: the silence between lines makes it easy to cut the take into 14 clips and place each one on its start time above.
 
-### 0:38 · You approve
-> It all lands on your dashboard. You click Approve. That's your only step.
-
-### 0:44 · Quill publishes
-> Then Quill puts it live on your website: photos, description, everything. No typing. No uploading.
-
-### 0:50 · Echo runs social media
-> Echo runs your social media. It writes in your brand's voice, uses photos from your website, and plans your whole week.
-
-### 0:58 · You review
-> You take a quick look… and it posts for you.
-
-### 1:05 · Concierge answers leads
-> Concierge answers every email and every website chat, day or night. It asks about budget and timing, and filters out the time-wasters.
-
-### 1:14 · Hot leads to WhatsApp
-> When a serious buyer, or a new seller, comes in, you get a WhatsApp message with their name, what they want, and their budget.
-
-### 1:24 · Dashboard
-> And one simple dashboard shows you what's working, what to change, and your hottest leads.
-
-### 1:33 · Your part
-> Your part? Approve listings, and review posts. That's it. We handle everything else.
-
-### 1:41 · Close
-> Pixel Island, for Best Bali Real Estate. Let's get started.
-
----
-
-## Recording notes
-
-- **Say the names clearly:** *Scout*, *Pin*, *Quill*, *Echo*, *Concierge*. They are the bot names on screen, so Lawrence should hear and see each one at the same moment.
-- **Pronunciation:** *Sanur* = "sa-NOOR".
-- Record in a quiet room, or use an AI voice tool such as ElevenLabs with a mature, warm voice. Export a single **MP3 or WAV** that starts at 0:00.
-- If a line runs long, trim words rather than speaking faster. The pace is part of the message.
+**Pronunciation:** *Sanur* = "sa-NOOR". It doesn't appear in the script, but if ElevenLabs is used for other copy, add it to a pronunciation dictionary.
 
 ## Adding the voiceover (and music) to the video
 
