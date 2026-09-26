@@ -3,10 +3,9 @@ import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {clamp, ease, useIn, useLayout, usePop} from '../anim';
 import {Bot} from '../components/Bot';
 import {Headline, Scene} from '../components/ui';
-import {BotId, C, FONT_SERIF} from '../theme';
+import {BOT_ORDER, C, FONT_SERIF} from '../theme';
 
 const LOGO = staticFile('pixel-island-logo.png');
-const ORDER: BotId[] = ['scout', 'pin', 'quill', 'echo', 'concierge'];
 
 export const S9Close: React.FC<{duration: number}> = ({duration}) => {
 	const frame = useCurrentFrame();
@@ -120,7 +119,7 @@ export const S9Close: React.FC<{duration: number}> = ({duration}) => {
 					transform: `translateY(${(1 - bots) * 20}px)`,
 				}}
 			>
-				{ORDER.map((id) => (
+				{BOT_ORDER.map((id) => (
 					<Bot key={id} id={id} size={square ? 56 : 64} badge={false} />
 				))}
 			</div>

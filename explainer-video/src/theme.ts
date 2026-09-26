@@ -40,13 +40,17 @@ export const shadow = {
 
 export type BotId = 'scout' | 'pin' | 'quill' | 'echo' | 'concierge';
 
+// Named after the Ghostbusters team: character names only, drawn as our own original bots.
 export const BOTS: Record<
 	BotId,
-	{name: string; job: string; color: string; soft: string}
+	{name: string; role: string; job: string; color: string; soft: string}
 > = {
-	scout: {name: 'Scout', job: 'Finds new listings', color: '#0F6B66', soft: '#D8EBE7'},
-	pin: {name: 'Pin', job: 'Finds the real address', color: '#3C77B0', soft: '#DCE8F4'},
-	quill: {name: 'Quill', job: 'Puts listings on your website', color: '#8466B3', soft: '#E9E1F4'},
-	echo: {name: 'Echo', job: 'Runs your social media', color: '#D29632', soft: '#F6E9CC'},
-	concierge: {name: 'Concierge', job: 'Answers & qualifies leads', color: '#C4573D', soft: '#F8DFD7'},
+	scout: {name: 'Winston', role: 'The Scout', job: 'Finds new listings', color: '#D17A22', soft: '#F8E4CC'},
+	pin: {name: 'Egon', role: 'The Architect', job: 'Finds the exact location', color: '#3C77B0', soft: '#DCE8F4'},
+	concierge: {name: 'Venkman', role: 'The Closer', job: 'Handles messages & leads', color: '#C4573D', soft: '#F8DFD7'},
+	quill: {name: 'Slimer', role: 'The Automator', job: 'Builds & posts listings', color: '#8466B3', soft: '#E9E1F4'},
+	echo: {name: 'Ray', role: 'The Creator', job: 'Creates your social posts', color: '#3E8E4E', soft: '#DDEFE0'},
 };
+
+/** Order the team is introduced in (follows the listing workflow). */
+export const BOT_ORDER: BotId[] = ['scout', 'pin', 'concierge', 'quill', 'echo'];

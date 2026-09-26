@@ -8,11 +8,11 @@ export const SCENES = [
 	{id: 'hook', seconds: 7},
 	{id: 'today', seconds: 10},
 	{id: 'crew', seconds: 9},
-	{id: 'listings', seconds: 24},
+	{id: 'listings', seconds: 38},
 	{id: 'social', seconds: 15},
 	{id: 'leads', seconds: 19},
 	{id: 'dashboard', seconds: 9},
-	{id: 'yourpart', seconds: 8},
+	{id: 'yourpart', seconds: 9},
 	{id: 'close', seconds: 7},
 ] as const;
 

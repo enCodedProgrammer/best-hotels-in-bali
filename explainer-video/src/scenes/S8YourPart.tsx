@@ -55,10 +55,10 @@ const Task: React.FC<{text: string; sub: string; delay: number; tickAt: number; 
 
 const DONE: {id: BotId; task: string}[] = [
 	{id: 'scout', task: 'Finding listings'},
-	{id: 'pin', task: 'Finding addresses'},
-	{id: 'quill', task: 'Publishing listings'},
-	{id: 'echo', task: 'Posting on social'},
-	{id: 'concierge', task: 'Answering leads'},
+	{id: 'pin', task: 'Finding locations'},
+	{id: 'concierge', task: 'Asking permission'},
+	{id: 'quill', task: 'Building listings'},
+	{id: 'echo', task: 'Creating posts'},
 ];
 
 const Helper: React.FC<{id: BotId; task: string; delay: number; size: number}> = ({id, task, delay, size}) => {
@@ -93,31 +93,32 @@ const Helper: React.FC<{id: BotId; task: string; delay: number; size: number}> =
 
 export const S8YourPart: React.FC<{duration: number}> = ({duration}) => {
 	const {square} = useLayout();
-	const label = useIn(170);
+	const label = useIn(200);
 	const size = square ? 78 : 110;
 	return (
 		<Scene duration={duration}>
-			<Headline text="Your part: *just two clicks.*" delay={4} top={square ? 90 : 110} size={square ? 70 : 84} />
+			<Headline text="Your team's part: *a few clicks.*" delay={4} top={square ? 90 : 110} size={square ? 70 : 84} />
 			<div
 				style={{
 					position: 'absolute',
-					top: square ? 240 : 320,
+					top: square ? 220 : 320,
 					left: 0,
 					right: 0,
 					display: 'flex',
 					flexDirection: square ? 'column' : 'row',
 					alignItems: 'center',
 					justifyContent: 'center',
-					gap: square ? 18 : 32,
+					gap: square ? 14 : 28,
 				}}
 			>
-				<Task text="Approve new listings" sub="One click on your dashboard" delay={20} tickAt={70} w={square ? 900 : 700} />
-				<Task text="Review posts" sub="A quick look before they go out" delay={36} tickAt={120} w={square ? 900 : 700} />
+				<Task text="Permission received" sub="When the agent or owner says yes" delay={20} tickAt={70} w={square ? 900 : 540} />
+				<Task text="Approve" sub="To put the listing live" delay={34} tickAt={115} w={square ? 900 : 540} />
+				<Task text="Review posts" sub="A quick look before they go out" delay={48} tickAt={160} w={square ? 900 : 540} />
 			</div>
 			<div
 				style={{
 					position: 'absolute',
-					top: square ? 580 : 610,
+					top: square ? 650 : 610,
 					left: 0,
 					right: 0,
 					textAlign: 'center',
@@ -133,7 +134,7 @@ export const S8YourPart: React.FC<{duration: number}> = ({duration}) => {
 			<div
 				style={{
 					position: 'absolute',
-					top: square ? 660 : 700,
+					top: square ? 720 : 700,
 					left: 0,
 					right: 0,
 					display: 'flex',
@@ -143,7 +144,7 @@ export const S8YourPart: React.FC<{duration: number}> = ({duration}) => {
 				}}
 			>
 				{DONE.map((d, i) => (
-					<Helper key={d.id} {...d} delay={195 + i * 12} size={size} />
+					<Helper key={d.id} {...d} delay={220 + i * 12} size={size} />
 				))}
 			</div>
 		</Scene>
