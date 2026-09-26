@@ -4,22 +4,23 @@ A 2:03 motion-graphics explainer for Lawrence (bestbalirealty.com) to go with th
 
 | Output | Size | Use |
 |---|---|---|
-| `out/best-bali-explainer-16x9-v3.mp4` | 1920×1080, 60fps | **Current.** Email, desktop, presentation |
-| `out/best-bali-explainer-1x1-v3.mp4` | 1080×1080, 60fps | **Current.** WhatsApp, phone viewing |
-| `out/*-v2.mp4` | | v2: his website and logo, old approval flow, original bot names |
+| `out/best-bali-explainer-16x9-v4.mp4` | 1920×1080, 60fps | **Current.** Email, desktop, presentation |
+| `out/best-bali-explainer-1x1-v4.mp4` | 1080×1080, 60fps | **Current.** WhatsApp, phone viewing |
+| `out/*-v3.mp4` | | v3: same workflow, Ghostbusters bot names (dropped) |
+| `out/*-v2.mp4` | | v2: his website and logo, old approval flow |
 | `out/best-bali-explainer-16x9.mp4`, `-1x1.mp4` | | v1 |
 
-v3 (2:03) shows the real listing workflow, including asking the agent for permission, and names the assistants after the Ghostbusters team. It uses the character names only, drawn as our own original bots, with no film logo, likenesses or ghost art.
+v4 (2:03) shows the real listing workflow, including asking the agent for permission, with the original assistant names.
 
 ## The team
 
-| Bot | Role | Job |
-|---|---|---|
-| Winston | The Scout | Finds new listings in his areas |
-| Egon | The Architect | Finds each villa's exact location |
-| Venkman | The Closer | Writes to agents for permission; answers and qualifies leads |
-| Slimer | The Automator | Builds the listing draft and publishes it on approval |
-| Ray | The Creator | Social media posts in his brand's voice |
+| Bot | Job |
+|---|---|
+| Scout | Finds new listings in his areas |
+| Pin | Finds each villa's exact location |
+| Concierge | Writes to agents for permission; answers and qualifies leads |
+| Quill | Builds the listing draft and publishes it on approval |
+| Echo | Social media posts in his brand's voice |
 
 ## Scenes
 
@@ -27,10 +28,10 @@ v3 (2:03) shows the real listing workflow, including asking the agent for permis
 |---|---|---|
 | 0:00 | Hook | His logo, then his real website at 0:03–0:06. "Lawrence, what if your business ran itself?" |
 | 0:07 | Today | Manual listing search, photo uploads, posts, 10–15 emails per lead |
-| 0:17 | Meet your team | Winston, Egon, Venkman, Slimer, Ray |
-| 0:26 | 01 · New listings | Winston finds villas → Egon finds the exact location → Venkman emails the listing agent for permission → **yes:** team clicks *Permission received*; **no:** team visits the owner at the exact address, gets permission and takes photos → Slimer builds a draft → team clicks *Approve* → live |
+| 0:17 | Meet your team | Scout, Pin, Concierge, Quill, Echo |
+| 0:26 | 01 · New listings | Scout finds villas → Pin finds the exact location → Concierge emails the listing agent for permission → **yes:** team clicks *Permission received*; **no:** team visits the owner at the exact address, gets permission and takes photos → Quill builds a draft → team clicks *Approve* → live |
 | 1:04 | 02 · Social media | Brand voice, auto-planned week, caption written for him → he reviews → it posts |
-| 1:19 | 03 · Leads | Venkman answers email and website chat, qualifies budget and timing, and sends hot leads to WhatsApp |
+| 1:19 | 03 · Leads | Concierge answers email and website chat, qualifies budget and timing, and sends hot leads to WhatsApp |
 | 1:38 | 04 · Dashboard | Performance, suggested change, hot leads |
 | 1:47 | Your team's part | Permission received · Approve · Review posts. Everything else is automated |
 | 1:56 | Close | Pixel Island logo, "Let's get started." |
@@ -42,8 +43,8 @@ Pricing and who owns the system are deliberately left out, because that decision
 ```bash
 npm install
 npm run studio          # live preview + timeline scrubbing
-npm run render:wide     # → out/best-bali-explainer-16x9-v3.mp4
-npm run render:square   # → out/best-bali-explainer-1x1-v3.mp4
+npm run render:wide     # → out/best-bali-explainer-16x9-v4.mp4
+npm run render:square   # → out/best-bali-explainer-1x1-v4.mp4
 ```
 
 In a sandbox without Remotion's own Chrome, point it at an existing headless Chromium:

@@ -17,7 +17,6 @@ const Member: React.FC<{id: BotId; delay: number; size: number; width: number}> 
 			</div>
 			<div style={{opacity: t, transform: `translateY(${(1 - t) * 16}px)`, textAlign: 'center', marginTop: 22}}>
 				<div style={{fontSize: 38, fontWeight: 700, color: C.ink}}>{bot.name}</div>
-				<div style={{fontSize: 17, fontWeight: 700, letterSpacing: '0.14em', color: C.muted, marginTop: 2}}>{bot.role.toUpperCase()}</div>
 				<div
 					style={{
 						marginTop: 10,

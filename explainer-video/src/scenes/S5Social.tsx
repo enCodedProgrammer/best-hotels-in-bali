@@ -218,7 +218,7 @@ export const S5Social: React.FC<{duration: number}> = ({duration}) => {
 				<Kicker num="02" label="Social media" color={BOTS.echo.color} />
 			</div>
 			<Headline
-				text="Ray posts every day, *in your brand's voice.*"
+				text="Echo posts every day, *in your brand's voice.*"
 				delay={10}
 				exitAt={470}
 				top={square ? 120 : 130}

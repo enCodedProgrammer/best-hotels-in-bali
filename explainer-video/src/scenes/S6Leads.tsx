@@ -8,7 +8,7 @@ import {BOTS, C, FONT_SERIF} from '../theme';
 
 const CON = BOTS.concierge;
 
-/* ---------------- Beat 1: Venkman answers ---------------- */
+/* ---------------- Beat 1: Concierge answers ---------------- */
 
 const EMAILS = [
 	{from: 'James T.', subject: 'Is the Sanur villa still available?'},
@@ -158,7 +158,7 @@ const AnswerBeat: React.FC = () => {
 				<Kicker num="03" label="Leads" color={CON.color} />
 			</div>
 			<Headline
-				text="Venkman answers *every inquiry,* day or night."
+				text="Concierge answers *every inquiry,* day or night."
 				delay={10}
 				top={square ? 120 : 130}
 				size={square ? 56 : 72}
@@ -204,7 +204,7 @@ const AnswerBeat: React.FC = () => {
 						</div>
 						<div>
 							<div style={{fontSize: 21, fontWeight: 700}}>Chat on bestbalirealty.com</div>
-							<div style={{fontSize: 16, opacity: 0.85}}>Venkman · replies instantly</div>
+							<div style={{fontSize: 16, opacity: 0.85}}>Concierge · replies instantly</div>
 						</div>
 					</div>
 					<div style={{flex: 1, padding: '22px 22px 0', display: 'flex', flexDirection: 'column', gap: 14}}>
@@ -388,7 +388,7 @@ const WhatsAppBeat: React.FC = () => {
 				<Appear delay={10}>
 					<div style={{display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18}}>
 						<Bot id="concierge" size={square ? 56 : 64} working />
-						<div style={{fontSize: square ? 23 : 27, fontWeight: 700}}>Venkman sorts every lead</div>
+						<div style={{fontSize: square ? 23 : 27, fontWeight: 700}}>Concierge sorts every lead</div>
 					</div>
 				</Appear>
 				<div style={{display: 'flex', flexDirection: 'column', gap: square ? 10 : 14}}>

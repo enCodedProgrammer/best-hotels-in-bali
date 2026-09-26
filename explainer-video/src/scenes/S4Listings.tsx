@@ -8,10 +8,10 @@ import {Appear, BeatFade, Browser, Card, Chip, Cursor, Headline, Kicker, Scene, 
 import {VillaArt} from '../components/VillaArt';
 import {BOTS, C, FONT_SERIF, shadow} from '../theme';
 
-const WIN = BOTS.scout;
-const EGON = BOTS.pin;
-const VENK = BOTS.concierge;
-const SLIMER = BOTS.quill;
+const SCOUT = BOTS.scout;
+const PIN = BOTS.pin;
+const CONCIERGE = BOTS.concierge;
+const QUILL = BOTS.quill;
 
 const ADDRESS = 'Jl. Pantai Sindhu 12, Sanur';
 const AGENT_EMAIL = 'agent@villa-agency.com';
@@ -45,7 +45,7 @@ const KickerRow: React.FC = () => {
 	);
 };
 
-/* ---------------- Beat 1: Winston finds → Egon locates ---------------- */
+/* ---------------- Beat 1: Scout finds → Pin locates ---------------- */
 
 const MapBeat: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -70,19 +70,19 @@ const MapBeat: React.FC = () => {
 	return (
 		<>
 			<Headline
-				text={`${WIN.name} finds new villas *in your areas.*`}
+				text={`${SCOUT.name} finds new villas *in your areas.*`}
 				delay={10}
 				exitAt={300}
 				top={square ? 120 : 130}
 				size={square ? 60 : 72}
-				accent={WIN.color}
+				accent={SCOUT.color}
 			/>
 			<Headline
-				text={`${EGON.name} finds the *exact location.*`}
+				text={`${PIN.name} finds the *exact location.*`}
 				delay={320}
 				top={square ? 120 : 130}
 				size={square ? 60 : 72}
-				accent={EGON.color}
+				accent={PIN.color}
 			/>
 
 			<SanurMap
@@ -108,8 +108,8 @@ const MapBeat: React.FC = () => {
 				>
 					<Bot id="scout" size={square ? 60 : 72} working={frame < 240} />
 					<div>
-						<div style={{fontSize: 24, fontWeight: 700}}>{WIN.name}</div>
-						<div style={{fontSize: 20, fontWeight: 600, color: WIN.color}}>
+						<div style={{fontSize: 24, fontWeight: 700}}>{SCOUT.name}</div>
+						<div style={{fontSize: 20, fontWeight: 600, color: SCOUT.color}}>
 							{found < 6 ? `Scanning listing sites${'.'.repeat(1 + (Math.floor(frame / 15) % 3))}` : '6 new villas in Sanur'}
 						</div>
 					</div>
@@ -120,7 +120,7 @@ const MapBeat: React.FC = () => {
 				<svg style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}} width={10} height={10}>
 					<path
 						d={`M ${pinPt.x} ${pinPt.y} C ${pinPt.x + (square ? 0 : 160)} ${pinPt.y + (square ? 60 : 0)}, ${cardPt.x - (square ? 0 : 120)} ${cardPt.y - (square ? 60 : 0)}, ${cardPt.x} ${cardPt.y}`}
-						stroke={EGON.color}
+						stroke={PIN.color}
 						strokeWidth={4}
 						fill="none"
 						pathLength={1}
@@ -163,7 +163,7 @@ const MapBeat: React.FC = () => {
 							{addrFound ? <CheckCircle2 size={30} color={C.green} strokeWidth={2.4} /> : <Lock size={28} color={C.muted} />}
 							<div style={{flex: 1}}>
 								<div style={{fontSize: 16, fontWeight: 700, letterSpacing: '0.1em', color: addrFound ? C.green : C.muted}}>
-									{addrFound ? `EXACT LOCATION FOUND BY ${EGON.name.toUpperCase()}` : searching ? `${EGON.name.toUpperCase()} IS LOOKING…` : 'ADDRESS'}
+									{addrFound ? `EXACT LOCATION FOUND BY ${PIN.name.toUpperCase()}` : searching ? `${PIN.name.toUpperCase()} IS LOOKING…` : 'ADDRESS'}
 								</div>
 								<div style={{fontSize: square ? 22 : 25, fontWeight: 600, color: addrFound ? C.ink : C.muted, marginTop: 2}}>
 									{addrFound ? <TypeText text={ADDRESS} start={490} cps={50} caret={false} /> : 'Not shown on the listing'}
@@ -178,7 +178,7 @@ const MapBeat: React.FC = () => {
 	);
 };
 
-/* ---------------- Beat 2: Venkman asks the agent for permission ---------------- */
+/* ---------------- Beat 2: Concierge asks the agent for permission ---------------- */
 
 const EMAIL_BODY =
 	'Hi, we have buyers looking in Sanur. Would you be happy for Best Bali Realty to list your 3-bed pool villa too?';
@@ -196,11 +196,11 @@ const AskBeat: React.FC = () => {
 	return (
 		<>
 			<Headline
-				text={`${VENK.name} asks the agent *for permission to list.*`}
+				text={`${CONCIERGE.name} asks the agent *for permission to list.*`}
 				delay={6}
 				top={square ? 110 : 130}
 				size={square ? 56 : 72}
-				accent={VENK.color}
+				accent={CONCIERGE.color}
 				maxWidth={square ? 940 : 1700}
 			/>
 
@@ -216,31 +216,31 @@ const AskBeat: React.FC = () => {
 								marginTop: 16,
 								padding: '14px 16px',
 								borderRadius: 16,
-								background: VENK.soft,
-								border: `2px solid ${VENK.color}`,
+								background: CONCIERGE.soft,
+								border: `2px solid ${CONCIERGE.color}`,
 								transform: `scale(${0.96 + 0.04 * contactHi})`,
 							}}
 						>
-							<div style={{fontSize: 15, fontWeight: 800, letterSpacing: '0.1em', color: VENK.color}}>CONTACT FOUND ON THE LISTING</div>
+							<div style={{fontSize: 15, fontWeight: 800, letterSpacing: '0.1em', color: CONCIERGE.color}}>CONTACT FOUND ON THE LISTING</div>
 							<div style={{display: 'flex', alignItems: 'center', gap: 10, marginTop: 8, fontSize: square ? 19 : 21, fontWeight: 600}}>
-								<Mail size={20} color={VENK.color} /> {AGENT_EMAIL}
+								<Mail size={20} color={CONCIERGE.color} /> {AGENT_EMAIL}
 							</div>
 							<div style={{display: 'flex', alignItems: 'center', gap: 10, marginTop: 6, fontSize: square ? 19 : 21, fontWeight: 600}}>
-								<Phone size={20} color={VENK.color} /> +62 812 •••• 4471
+								<Phone size={20} color={CONCIERGE.color} /> +62 812 •••• 4471
 							</div>
 						</div>
 					</div>
 				</Card>
 			</Appear>
 
-			{/* the message Venkman writes */}
+			{/* the message Concierge writes */}
 			<Appear delay={40} x={40} y={0} style={{position: 'absolute', left: mail.l, top: mail.t, width: mail.w}}>
 				<Card pad={0} style={{overflow: 'hidden'}}>
-					<div style={{display: 'flex', alignItems: 'center', gap: 14, padding: '14px 22px', background: VENK.color, color: '#fff'}}>
+					<div style={{display: 'flex', alignItems: 'center', gap: 14, padding: '14px 22px', background: CONCIERGE.color, color: '#fff'}}>
 						<div style={{background: '#fff', borderRadius: 99, padding: 4}}>
 							<Bot id="concierge" size={40} badge={false} working={!sent} />
 						</div>
-						<div style={{fontSize: 22, fontWeight: 700}}>New message · written by {VENK.name}</div>
+						<div style={{fontSize: 22, fontWeight: 700}}>New message · written by {CONCIERGE.name}</div>
 					</div>
 					<div style={{padding: square ? '16px 24px' : '22px 30px', fontSize: square ? 20 : 23}}>
 						<div style={{display: 'flex', gap: 12, paddingBottom: 12, borderBottom: `1px solid ${C.line}`}}>
@@ -262,7 +262,7 @@ const AskBeat: React.FC = () => {
 									gap: 10,
 									padding: '14px 26px',
 									borderRadius: 14,
-									background: sent ? C.green : VENK.color,
+									background: sent ? C.green : CONCIERGE.color,
 									color: '#fff',
 									fontWeight: 700,
 									fontSize: 22,
@@ -345,7 +345,7 @@ const Step: React.FC<{icon: React.ReactNode; text: string; at: number; fs: numbe
 					width: 46,
 					height: 46,
 					borderRadius: 14,
-					background: EGON.soft,
+					background: PIN.soft,
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
@@ -419,8 +419,8 @@ const OutcomeBeat: React.FC = () => {
 			</div>
 			<PermissionButton clickAt={170} compact={square} cursorFrom={{x: 420, y: 160, at: 90}} cursorAt={80} />
 			<Appear delay={200} style={{marginTop: 'auto'}}>
-				<div style={{display: 'flex', alignItems: 'center', gap: 14, fontSize: fs, fontWeight: 600, color: SLIMER.color}}>
-					<Bot id="quill" size={60} badge={false} working /> {SLIMER.name} takes it from here.
+				<div style={{display: 'flex', alignItems: 'center', gap: 14, fontSize: fs, fontWeight: 600, color: QUILL.color}}>
+					<Bot id="quill" size={60} badge={false} working /> {QUILL.name} takes it from here.
 				</div>
 			</Appear>
 		</PathCard>
@@ -429,10 +429,10 @@ const OutcomeBeat: React.FC = () => {
 	const noCard = (
 		<PathCard tone="no" active={noActive} w={w} h={h} compact={square}>
 			{frame >= NO_AT - 10 ? <Bubble text="Sorry, we're keeping this one." at={NO_AT + 10} fs={fs} /> : <div style={{height: fs * 2.6}} />}
-			<Step icon={<MapPin size={24} color={EGON.color} />} text={`You have the exact address: ${ADDRESS}`} at={NO_AT + 70} fs={fs} />
-			<Step icon={<Footprints size={24} color={EGON.color} />} text="Your team visits the owner directly" at={NO_AT + 120} fs={fs} />
-			<Step icon={<Handshake size={24} color={EGON.color} />} text="The owner gives permission" at={NO_AT + 170} fs={fs} />
-			<Step icon={<Camera size={24} color={EGON.color} />} text="Your team takes the photos" at={NO_AT + 220} fs={fs} />
+			<Step icon={<MapPin size={24} color={PIN.color} />} text={`You have the exact address: ${ADDRESS}`} at={NO_AT + 70} fs={fs} />
+			<Step icon={<Footprints size={24} color={PIN.color} />} text="Your team visits the owner directly" at={NO_AT + 120} fs={fs} />
+			<Step icon={<Handshake size={24} color={PIN.color} />} text="The owner gives permission" at={NO_AT + 170} fs={fs} />
+			<Step icon={<Camera size={24} color={PIN.color} />} text="Your team takes the photos" at={NO_AT + 220} fs={fs} />
 			{frame >= NO_AT + 250 ? (
 				<PermissionButton clickAt={NO_AT + 330} compact={square} cursorFrom={{x: 460, y: 120, at: NO_AT + 270}} cursorAt={NO_AT + 262} />
 			) : null}
@@ -483,7 +483,7 @@ const OutcomeBeat: React.FC = () => {
 	);
 };
 
-/* ---------------- Beat 4: Slimer builds a draft → you approve → live ---------------- */
+/* ---------------- Beat 4: Quill builds a draft → you approve → live ---------------- */
 
 const DESCRIPTION =
 	'Wake up to sunrise over your own infinity pool. This light-filled three-bedroom villa sits on a quiet lane in Sanur, a short walk from Sindhu Beach and the promenade. Open-plan living, a chef’s kitchen and lush tropical gardens.';
@@ -515,12 +515,12 @@ const DraftBeat: React.FC = () => {
 	return (
 		<>
 			<Headline
-				text={`${SLIMER.name} builds the listing *and saves a draft.*`}
+				text={`${QUILL.name} builds the listing *and saves a draft.*`}
 				delay={6}
 				exitAt={APPROVE_AT - 30}
 				top={square ? 120 : 130}
 				size={square ? 56 : 72}
-				accent={SLIMER.color}
+				accent={QUILL.color}
 				maxWidth={square ? 940 : 1700}
 			/>
 			<Headline
@@ -609,8 +609,8 @@ const DraftBeat: React.FC = () => {
 
 /* ---------------- Scene ---------------- */
 
-const B1 = 660; // Winston + Egon
-const B2 = 420; // Venkman asks
+const B1 = 660; // Scout + Pin
+const B2 = 420; // Concierge asks
 const B3 = 720; // yes / no paths
 
 export const S4Listings: React.FC<{duration: number}> = ({duration}) => {
